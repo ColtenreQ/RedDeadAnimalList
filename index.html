@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>RDR2 - Animal List</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <h1>Red Dead Redemption 2 - Animal Skins List</h1>
+    </header>
+
+    <section id="listSection">
+      <table id="animalList">
+        <tr>
+          <th class="tableHead">Animal</th>
+          <th class="tableHead">Item</th>
+          <th class="tableHead">Amount</th>
+        </tr>
+      </table>
+    </section>
+
+    <section id="formSection">
+      <table id="formTable">
+        <tr>
+          <th>
+            Animal:
+          </th>
+          <th>
+            Item:
+          </th>
+          <th>
+            Amount:
+          </th>
+        </tr>
+        <tr>
+          <form action="get" id="animalForm">
+            <td>
+              <input type="text" name="animalName" id="animalName">
+            </td>
+            <td>
+              <input type="text" name="itemName" id="itemName">
+            </td>
+            <td>
+              <input type="text" name="amount" id="amount">
+            </td>
+            <td>
+              <button type="submit" action="submit">Add Item</button>
+            </td>
+          </form>
+
+        </tr>
+      </table>
+    </section>
+
+    <footer>
+
+    </footer>
+
+  </div>
+  <script src="script.js"></script>
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
