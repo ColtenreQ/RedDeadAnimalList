@@ -5,7 +5,7 @@ let testSubmit = document.getElementById('testButton');
 let animalName;
 let itemName;
 let amountName;
-let listArray = [["Jackrabbit", "Perfect Skin", "3"], ["Boar", "Legendary Skin", "3"]];
+let listArray = [];
 
 animalForm.addEventListener("submit", (animalStuff) => {
   animalStuff.preventDefault();
