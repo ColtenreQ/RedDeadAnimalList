@@ -1,57 +1,79 @@
-html {
-  font-family: Arial;
+
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+/* Variables */
+
+:root {
+  --BG-COLOR: antiquewhite;
+  --SEC-COLOR: tan;
+  --ACCENT-COLOR: rgb(128, 0, 0);
+  --FC: black;
+  --FF: 'Shadows into light', cursive;
+  --FS-NORMAL: clamp(32px, 5vh, 100px);
+  --FS-SMALL: clamp(24px, 4vh, 80px);
 }
+
 
 body {
-  background-color: antiquewhite;
-  font-family: Arial;
+  background-color: var(--BG-COLOR);
+  font-family: var(--FF);
 }
 
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BG-COLOR: rgb(28, 4, 4); 
+    --SEC-COLOR: rgb(94, 80, 63);
+    --FC: rgb(234, 218, 198);
+  }
 }
 
-h2 {
-  font-family: Arial, Helvetica, sans-serif;
+h1, h2, p {
+  font-family: var(--FF);
+  font-size: var(--FS-NORMAL);
+  color: var(--FC);
 }
 
-p {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 button {
-  appearance: none;
-  background-color: green;
+  background-color: var(--ACCENT-COLOR);
   border: none;
   box-shadow: none;
-  color: white;
+  color: black;
   border-radius: 10px;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-family: Roboto, sans-serif;
+  margin-left: 12%;
+  padding: 1.2rem;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
 }
 
 button:hover {
-  background-color: greenyellow;
+  scale: 110%;
+  transform: rotateZ(-120deg);
+  transition: 1s;
+}
+
+.buttonClicked {
+  transition: 0.5s;
+  animation: shooter 1s ease-in-out;
+}
+
+.fa-gun {
+  font-size: 2rem;
 }
 
 
 .tableHead {
-  background-color: tan;
+  background-color: var(--SEC-COLOR);
   border-radius: 5px;
   line-height: 3rem;
   text-align: center;
 }
 
-.tableRow {
-  padding-top: 2rem;
-}
-
 .items {
-  background-color: tan;
+  background-color: var(--SEC-COLOR);
   border-radius: 5px;
+  font-family: var(--FF);
+  font-size: var(--FS-SMALL);
+  color: var(--FC);
   line-height: 5rem;
   text-align: center;
 }
@@ -64,7 +86,7 @@ button:hover {
 #formTable {
   width: 40%;
   margin-bottom: 1rem;
-  background-color: tan;
+  background-color: var(--SEC-COLOR);
   border-radius: 5px;
   padding: 1rem;
 }
@@ -73,4 +95,27 @@ button:hover {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+}
+
+#animalName, #itemName, #amount {
+  background-color: var(--SEC-COLOR);
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: var(--FS-SMALL);
+  font-family: var(--FF);
+  color: var(--FC);
+  box-shadow: none;
+  border-color: var(--FC);
+  border-style: solid;
+}
+
+
+
+/* Animations */
+
+@keyframes shooter {
+  100% {
+    transform: rotateZ(720deg);
+    scale:100%;
+  }
 }
