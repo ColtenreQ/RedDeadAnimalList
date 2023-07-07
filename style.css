@@ -1,5 +1,5 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 
 /* Variables */
 
@@ -8,11 +8,10 @@
   --SEC-COLOR: tan;
   --ACCENT-COLOR: rgb(128, 0, 0);
   --FC: black;
-  --FF: 'Shadows into light', cursive;
+  --FF: "Shadows into light", cursive;
   --FS-NORMAL: clamp(32px, 5vh, 100px);
   --FS-SMALL: clamp(24px, 4vh, 80px);
 }
-
 
 body {
   background-color: var(--BG-COLOR);
@@ -21,18 +20,19 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --BG-COLOR: rgb(28, 4, 4); 
+    --BG-COLOR: rgb(28, 4, 4);
     --SEC-COLOR: rgb(94, 80, 63);
     --FC: rgb(234, 218, 198);
   }
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   font-family: var(--FF);
   font-size: var(--FS-NORMAL);
   color: var(--FC);
 }
-
 
 button {
   background-color: var(--ACCENT-COLOR);
@@ -59,7 +59,6 @@ button:hover {
 .fa-gun {
   font-size: 2rem;
 }
-
 
 .tableHead {
   background-color: var(--SEC-COLOR);
@@ -97,7 +96,9 @@ button:hover {
   margin-top: 2rem;
 }
 
-#animalName, #itemName, #amount {
+#animalName,
+#itemName,
+#amount {
   background-color: var(--SEC-COLOR);
   border-radius: 10px;
   padding: 0.5rem;
@@ -109,13 +110,11 @@ button:hover {
   border-style: solid;
 }
 
-
-
 /* Animations */
 
 @keyframes shooter {
   100% {
     transform: rotateZ(720deg);
-    scale:100%;
+    scale: 100%;
   }
 }
